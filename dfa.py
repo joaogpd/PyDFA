@@ -5,9 +5,10 @@ to the delta_hat function, it will issue an error message and abort execution.
 delta is a dictionary with keys of the model (state, symbol), and the content referenced by the
 key is the state p resulting of delta(state, symbol). F is a list that contains the accepting states of the DFA, 
 and q0, an one-character string, is the start state.
-The delta_hat function takes in a string and evaluates whether it belongs to the DFA's language or not. 
-The delta_hat_hat function iterates over a list of strings, for 
+The delta_hat method takes in a string and evaluates whether it belongs to the DFA's language or not. 
+The delta_hat_hat method iterates over a list of strings, for 
 ease of use with larger amounts of input.
+The show_automata method prints out the contents of the DFA.
 """
 class DFA:
   def __init__(self, Q: list, Sigma: list, delta: dict, F: list, q0: str):
