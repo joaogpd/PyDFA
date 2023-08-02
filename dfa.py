@@ -33,6 +33,13 @@ class DFA:
     for string in string_list:
       self.delta_hat(string)
 
+  def show_automata(self):
+    print(f"States: {self.Q}")
+    print(f"Alphabet: {self.Sigma}")
+    print(f"Transition Function: {self.delta}")
+    print(f"Accepting States: {self.F}")
+    print(f"Starting State: {self.q0}")
+
 
 """
 Example usage of the class. This DFA accepts only strings ended by 01 or 00.
