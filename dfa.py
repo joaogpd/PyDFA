@@ -8,7 +8,7 @@ and q0, an one-character string, is the start state.
 The delta_hat method takes in a string and evaluates whether it belongs to the DFA's language or not. 
 The delta_hat_hat method iterates over a list of strings, for 
 ease of use with larger amounts of input.
-The show_automata method prints out the contents of the DFA.
+The show_automaton method prints out the contents of the DFA.
 """
 class DFA:
   def __init__(self, Q: list, Sigma: list, delta: dict, F: list, q0: str):
@@ -34,7 +34,7 @@ class DFA:
     for string in string_list:
       self.delta_hat(string)
 
-  def show_automata(self):
+  def show_automaton(self):
     print(f"States: {self.Q}")
     print(f"Alphabet: {self.Sigma}")
     print(f"Transition Function: {self.delta}")
@@ -62,6 +62,7 @@ def main():
       "00", "01", "0010", "0001001", "000000", "001110", "0110110", "00001"
   ]
   DFA_1.delta_hat_hat(string_list)
+  DFA_1.show_automaton()
 
 
 if __name__ == "__main__":
