@@ -3,7 +3,8 @@ This class implements a DFA structure. States, in Q, is a list of the possible s
 DFA. Sigma is the alphabet that the DFA can accept. If a symbol not in the alphabet is provided
 to the delta_hat function, it will issue an error message and abort execution. 
 delta is a dictionary with keys of the model (state, symbol), and the content referenced by the
-key is the state p resulting of delta(state, symbol). F is a list that contains the accepting states of the DFA, and q0 is the start state, being only a one-character string.
+key is the state p resulting of delta(state, symbol). F is a list that contains the accepting states of the DFA, a
+nd q0, an one-character string, is the start state.
 The delta_hat function takes in a string and evaluates whether it belongs to the language of the
 DFA or not. The delta_hat_hat function is just iterating over a list of strings, for 
 ease of use with larger amounts of data/strings.
