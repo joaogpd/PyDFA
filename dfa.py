@@ -40,30 +40,3 @@ class DFA:
     print(f"Transition Function: {self.delta}")
     print(f"Accepting States: {self.F}")
     print(f"Starting State: {self.q0}")
-
-
-"""
-Example usage of the class. This DFA accepts only strings ended by 01 or 00.
-"""
-def main():
-  DFA_1 = DFA(
-      ["A", "B", "C", "D"], ["0", "1"], {
-          ("A", "0"): "B",
-          ("A", "1"): "A",
-          ("B", "0"): "C",
-          ("B", "1"): "D",
-          ("C", "0"): "C",
-          ("C", "1"): "D",
-          ("D", "0"): "B",
-          ("D", "1"): "A"
-      }, ["C", "D"], "A")
-
-  string_list = [
-      "00", "01", "0010", "0001001", "000000", "001110", "0110110", "00001"
-  ]
-  DFA_1.delta_hat_hat(string_list)
-  DFA_1.show_automaton()
-
-
-if __name__ == "__main__":
-  main()
